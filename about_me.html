@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>自己紹介</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+	</head>
+<style>
+body {
+  background: linear-gradient(
+    135deg,
+    #fff5f8,
+    #fffdfd,
+    #fef6ff
+  );
+}
+  .frame {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  border: 2px dashed #f8b6c1;
+  position: relative;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 25px;
+  border: 2px solid #ffdce5;
+  z-index: -1;
+}
+
+.frame::after {
+  content: "🌸";
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  font-size: 24px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 5px 20px rgba(248,182,193,0.4);
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h1 {
+  color: #f48aa3;
+  margin-bottom: 10px;
+}
+
+.text p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.likes {
+  margin-top: 20px;
+}
+
+.likes h2 {
+  font-size: 16px;
+  color: #f48aa3;
+}
+
+.likes li {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 14px;
+  background: #ffeaf1;
+  border: 1px solid #ffd1dc;
+  border-radius: 999px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.likes li:hover {
+  transform: translateY(-3px);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #f8b6c1;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background: #f48aa3;
+  color: white;
+}
+
+
+.section{
+    margin-top:40px;
+}
+
+.section h2{
+    color:#f48aa3;
+    margin-bottom:15px;
+}
+
+.section p{
+    line-height:1.8;
+    color:#666;
+}
+
+.section ul{
+    list-style:none;
+    padding:0;
+}
+
+.section li{
+    margin:8px 0;
+    padding:10px 15px;
+    background:#fff7fa;
+    border-radius:10px;
+}
+</style>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="home.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">about me</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="home.html">Home</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div class="frame">
+
+  <!-- プロフィール -->
+  <div class="profile">
+    <img src="images/案1.png" alt="プロフィール画像">
+
+    <div class="text">
+      <h1>Wendy</h1>
+
+      <p>
+        初めまして！<br>
+        独学でピアノを練習しています🎹<br>
+        趣味は絵を描くことやアニメを見ることです。<br>
+        よろしくお願いします！
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 好きなもの -->
+  <section class="section">
+    <h2>💗 好きなもの</h2>
+
+    <ul>
+      <li>🎹 ピアノ</li>
+      <li>🎤 カラオケ</li>
+      <li>🎮 ゲーム</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 最近頑張っていること -->
+  <section class="section">
+    <h2>🌱 最近頑張っていること</h2>
+
+    <p>
+      絵を描くのを頑張っています。<br>
+      前まで描けなかった部分が描けたり、苦手だった部分を克服したりしてきていて嬉しいです！
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- 好きな曲 -->
+  <section class="section">
+    <h2>🎼 好きな曲</h2>
+
+    <ul>
+      <li><a href="https://utaten.com/lyric/jb51202055/" target="_blank">
+      ♪ 千本桜/黒うさP feat.初音ミク</a></li>
+      <li><a href="https://utaten.com/lyric/mi23092717/" target="_blank"> 
+      ♪ 勇者/YOASOBI</a></li>
+      <li><a href="https://utaten.com/lyric/qa30621043/" target="_blank">
+      ♪ 青のすみか/キタニタツヤ</a></li>
+      <li><a href="https://utaten.com/lyric/mi20092305/" target="_blank">
+      ♪ テレキャスタービーボーイ/すりぃ</a></li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 推し -->
+  <section class="section">
+    <h2>💖 推し</h2>
+
+    <ul>
+      <li>天使の悪魔/チェンソーマン</li>
+      <li>乙骨憂太/呪術廻戦</li>
+      <li>堀部糸成/暗殺教室</li>
+      <li>碇シンジ/新世紀エヴァンゲリオン</li>
+      <li>時透無一郎/鬼滅の刃</li>
+      <li>緑谷出久/僕のヒーローアカデミア</li>
+      <li>猫猫/薬屋のひとりごと</li>
+      <li>流鏑馬鉄男/スノウボールアース</li>
+      <li>沖田総悟/銀魂</li>
+      <li>緒方恵美/声優</li>
+    </ul>
+  </section>
+  <!-- メッセージ -->
+  <section class="section">
+    <h2>💌 Message</h2>
+
+    <p>最後まで見ていただきありがとうございます！</p>
+  </section>
+
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

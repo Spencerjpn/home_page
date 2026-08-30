@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>アニメ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+
+body {
+  background-color: #f7f7f9;
+}
+
+#header {
+  background-color: #fce4ec;
+}
+
+h1, h2 {
+  color: #555;
+}
+
+.tiles article {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tiles article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tiles article img {
+  border-radius: 15px 15px 0 0;
+}
+
+#anime-detail {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tiles article h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+</style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+  <header id="header">
+    <div class="inner">
+      <a href="home.html" class="logo">
+        <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+        <span class="title">anime Site</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div id="main">
+    <div class="inner">
+
+      <h1>アニメ</h1>
+      <p>アニメの画像をクリックすると詳細が表示されます</p>
+
+      <section class="tiles">
+
+        <article onclick="showanime('jujutsu')">
+          <span class="image">
+            <img src="images/jujutsu.jpg" alt="">
+          </span>
+          <h2>呪術廻戦</h2>
+        </article>
+
+        <article onclick="showanime('eva')">
+          <span class="image">
+            <img src="images/eva.jpg" alt="">
+          </span>
+          <h2>新世紀エヴァンゲリオン</h2>
+        </article>
+
+        <article onclick="showanime('ansatsu')">
+          <span class="image">
+            <img src="images/ansatsu.jpg" alt="">
+          </span>
+          <h2>暗殺教室</h2>
+        </article>
+
+		<article onclick="showanime('kimetsu')">
+          <span class="image">
+            <img src="images/kimetsu.jpg" alt="">
+          </span>
+          <h2>鬼滅の刃</h2>
+        </article>
+      
+		<article onclick="showanime('hiroaka')">
+          <span class="image">
+            <img src="images/hiroaka.jpg" alt="">
+          </span>
+          <h2>僕のヒーローアカデミア</h2>
+        </article>
+    <article onclick="showanime('titan')">
+          <span class="image">
+            <img src="images/attack_on_titan.png" alt="">
+          </span>
+          <h2>進撃の巨人</h2>
+        </article>
+        
+
+      </section>
+
+      <div id="anime-detail" style="margin-top:50px;">
+        <h2>アニメの画像を選択してください</h2>
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="inner">
+      <p>&copy; anime Site</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+function showanime(anime) {
+
+  const detail = document.getElementById("anime-detail");
+
+  if (anime === "jujutsu") {
+    detail.innerHTML = `
+      <h2>呪術廻戦</h2>
+      <img src="images/jujutsu.jpg" style="width:300px;">
+      <p>評価：★★★★★</p>
+	  <p>設定がしっかりとしていて細かいところまで詳しく知れるのでそう言うのが好きな私にはとてもいいアニメ</p>
+    <p>第1期ではたくさん新しいキャラが出てきたり新しい呪術の要素が追加されたりして、第2期ではかっこいい戦闘シーンが出てきてストーリーが進むにつれて新しい技が出てきてかっこいい</p>
+    `;
+  }
+
+  if (anime === "eva") {
+    detail.innerHTML = `
+      <h2>新世紀エヴァンゲリオン</h2>
+      <img src="images/eva.jpg" style="width:300px;">
+      <p>宇宙と家族の物語</p>
+      <p>評価：★★★★★</p>
+    `;
+  }
+
+  if (anime === "ansatsu") {
+    detail.innerHTML = `
+      <h2>暗殺教室</h2>
+      <img src="images/ansatsu.jpg" style="width:300px;">
+      <p>仮想世界のSFアクション</p>
+      <p>評価：★★★★★</p>
+    `;
+  }
+  if (anime === "kimetsu") {
+    detail.innerHTML = `
+      <h2>鬼滅の刃</h2>
+      <img src="images/kimetsu.jpg" style="width:300px;">
+      <p>仮想世界のSFアクション</p>
+      <p>評価：★★★★★</p>
+    `;
+  }
+  if (anime === "hiroaka") {
+    detail.innerHTML = `
+      <h2>僕のヒーローアカデミア</h2>
+      <img src="images/hiroaka.jpg" style="width:300px;">
+      <p>仮想世界のSFアクション</p>
+      <p>評価：★★★★★</p>
+    `;
+  }
+  if (anime === "titan") {
+    detail.innerHTML = `
+      <h2>進撃の巨人</h2>
+      <img src="images/attack_on_titan.png" style="width:300px;">
+      <p>仮想世界のSFアクション</p>
+      <p>評価：★★★★★</p>
+    `;
+  }
+
+}
+</script>
+
+</body>
+</html>

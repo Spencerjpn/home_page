@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>映画レビュー</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+
+body {
+  background-color: #f7f7f9;
+}
+
+#header {
+  background-color: #fce4ec;
+}
+
+h1, h2 {
+  color: #555;
+}
+
+.tiles article {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tiles article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tiles article img {
+  border-radius: 15px 15px 0 0;
+}
+
+#movie-detail {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tiles article h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+</style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+  <!-- Header（そのまま） -->
+  <header id="header">
+    <div class="inner">
+      <a href="home.html" class="logo">
+
+        <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+        <span class="title">Movie Site</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div id="main">
+    <div class="inner">
+
+      <h1>映画レビュー</h1>
+      <p>映画をクリックすると詳細が表示されます</p>
+
+      <section class="tiles">
+
+        <article onclick="showMovie('jyujyutsu0')">
+          <span class="image">
+            <img src="images/jyujyutsu0.jpg" alt="">
+          </span>
+          <h2>呪術廻戦０</h2>
+        </article>
+
+        <article onclick="showMovie('jyujyutsu_senkou')">
+          <span class="image">
+            <img src="images/jyujyutsu_senkou.jpg" alt="">
+          </span>
+          <h2>呪術廻戦　死滅回遊＿先行上映</h2>
+        </article>
+
+        <article onclick="showMovie('kimetsu1')">
+          <span class="image">
+            <img src="images/kimetsu1.jpg" alt="">
+          </span>
+          <h2>鬼滅の刃　第一章　猗窩座再来</h2>
+        </article>
+
+        <article onclick="showMovie('chiikawa')">
+          <span class="image">
+            <img src="images/chiikawa.jpg" alt="">
+          </span>
+          <h2>ちいかわ　人魚の島のひみつ</h2>
+        </article>
+
+        <article onclick="showMovie('gintama')">
+          <span class="image">
+            <img src="images/gintama.jpg" alt="">
+          </span>
+          <h2>銀魂　吉原大炎上</h2>
+        </article>
+
+      </section>
+
+      <div id="movie-detail" style="margin-top:50px;">
+        <h2>映画を選択してください</h2>
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="inner">
+      <p>&copy; Movie Site</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+function showMovie(movie) {
+
+  const detail = document.getElementById("movie-detail");
+
+  if (movie === "jyujyutsu0") {
+    detail.innerHTML = `
+      <h2>呪術廻戦０</h2>
+      <img src="images/jyujyutsu0.jpg" style="width:300px;">
+	  <p>ジャンル：アニメ</p>
+      <p>愛と呪いの物語</p>
+      <p>評価：★★★★★</p>
+	  <p>主人公となる乙骨憂太の心情や辛い過去がよくわかり見ていて引き込まれた</p>
+	  <p>声優さんの声の使い方や戦闘シーンの作画、また最後の五条先生の夏油への語りかけのシーンで伏線をはっているのがいいと思った</p>
+    `;
+  }
+
+  if (movie === "jyujyutsu_senkou") {
+    detail.innerHTML = `
+      <h2>呪術廻戦　死滅回遊＿先行上映</h2>
+      <img src="images/jyujyutsu_senkou.jpg" style="width:300px;">
+      <p>ジャンル：アニメ</p>
+      <p>評価：★★★★★</p>
+      <p>戦闘シーンがカッコよく、主人公の心情も伝わってきた</p>
+    `;
+  }
+
+  if (movie === "kimetsu1") {
+    detail.innerHTML = `
+      <h2>鬼滅の刃　第一章　猗窩座再来</h2>
+      <img src="images/kimetsu1.jpg" style="width:300px;">
+      <p>ジャンル：アニメ</p>
+      <p>評価：★★★★★</p>
+      <p>作画がとにかく綺麗　戦闘シーンもそうじゃなくても細かいところまで凝っている</p>
+      <p>アニメの中にあったセリフの伏線回収も綺麗にしている</p>
+    `;
+  }
+
+  if (movie === "chiikawa") {
+    detail.innerHTML = `
+      <h2>ちいかわ　人魚の島のひみつ</h2>
+      <img src="images/chiikawa.jpg" style="width:300px;">
+      <p>ジャンル：アニメ</p>
+      <p>評価：★★★★★</p>
+      <p></p>
+      <p></p>
+    `;
+  }
+
+  if (movie === "gintama") {
+    detail.innerHTML = `
+      <h2>銀魂　吉原大炎上</h2>
+      <img src="images/gintama.jpg" style="width:300px;">
+      <p>ジャンル：アニメ</p>
+      <p>評価：★★★★★</p>
+      <p></p>
+      <p></p>
+    `;
+  }
+
+}
+</script>
+
+</body>
+</html>

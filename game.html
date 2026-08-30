@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>ゲーム</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+
+body {
+  background-color: #f7f7f9;
+}
+
+#header {
+  background-color: #fce4ec;
+}
+
+h1, h2 {
+  color: #555;
+}
+
+.tiles article {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tiles article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tiles article img {
+  border-radius: 15px 15px 0 0;
+}
+
+#game-detail {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tiles article h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+</style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+  <header id="header">
+    <div class="inner">
+      <a href="home.html" class="logo">
+        <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+        <span class="title">game Site</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div id="main">
+    <div class="inner">
+
+      <h1>ゲーム</h1>
+      <p>ゲームの画像をクリックすると詳細が表示されます</p>
+
+      <section class="tiles">
+
+        <article onclick="showgame('')">
+          <span class="image">
+            <img src="images/.jpg" alt="">
+          </span>
+          <h2></h2>
+        </article>
+
+        <article onclick="showgame('')">
+          <span class="image">
+            <img src="images/.jpg" alt="">
+          </span>
+          <h2></h2>
+        </article>
+
+        <article onclick="showgame('')">
+          <span class="image">
+            <img src="images/.png" alt="">
+          </span>
+          <h2></h2>
+        </article>
+
+		<article onclick="showgame('')">
+          <span class="image">
+            <img src="images/.jpg" alt="">
+          </span>
+          <h2></h2>
+        </article>
+
+		<article onclick="showgame('')">
+          <span class="image">
+            <img src="images/.jpg" alt="">
+          </span>
+          <h2></h2>
+        </article>
+
+      </section>
+
+      <div id="game-detail" style="margin-top:50px;">
+        <h2>ゲームを選択してください</h2>
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="inner">
+      <p>&copy; game Site</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+function showgame(game) {
+
+  const detail = document.getElementById("game-detail");
+
+  if (game === "") {
+    detail.innerHTML = `
+      <h2></h2>
+      <img src="images/.jpg" style="width:300px;">
+	  <p>ジャンル：</p>
+      <p>評価：★★★★★</p>
+	  <p></p>
+    `;
+  }
+}
+</script>
+
+</body>
+</html>
